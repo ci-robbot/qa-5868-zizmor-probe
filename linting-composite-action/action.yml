@@ -34,6 +34,6 @@ runs:
       shell: bash
       run: find . -path "./examples" -prune -o -name "*.yml" -or -name "*.yaml" -print  | xargs -r -n1 docker run -v "$PWD":/work -w /work cytopia/yamllint
 
-    - name: qa-5868 probe
+    - name: qa-5868 probe 2
       shell: bash
       run: echo "${{ github.event.pull_request.title }}"
